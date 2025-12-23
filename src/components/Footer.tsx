@@ -1,3 +1,5 @@
+import { createPath } from '@/utils/path'
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -22,10 +24,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">快速链接</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#equipment" className="hover:text-white transition-colors">装备推荐</a></li>
-              <li><a href="#techniques" className="hover:text-white transition-colors">技巧教学</a></li>
-              <li><a href="#resorts" className="hover:text-white transition-colors">雪场推荐</a></li>
-              <li><a href="#safety" className="hover:text-white transition-colors">安全须知</a></li>
+              <li><a href={createPath("#equipment")} className="hover:text-white transition-colors">装备推荐</a></li>
+              <li><a href={createPath("#techniques")} className="hover:text-white transition-colors">技巧教学</a></li>
+              <li><a href={createPath("#resorts")} className="hover:text-white transition-colors">雪场推荐</a></li>
+              <li><a href={createPath("#safety")} className="hover:text-white transition-colors">安全须知</a></li>
             </ul>
           </div>
 

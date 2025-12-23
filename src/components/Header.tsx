@@ -1,5 +1,7 @@
 'use client'
 
+import { createPath } from '@/utils/path'
+
 interface HeaderProps {
   isMenuOpen: boolean
   setIsMenuOpen: (open: boolean) => void
@@ -23,11 +25,11 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#equipment" className="text-gray-700 hover:text-blue-600 transition-colors">装备推荐</a>
-            <a href="#techniques" className="text-gray-700 hover:text-blue-600 transition-colors">技巧教学</a>
-            <a href="#resorts" className="text-gray-700 hover:text-blue-600 transition-colors">雪场推荐</a>
-            <a href="#safety" className="text-gray-700 hover:text-blue-600 transition-colors">安全须知</a>
-            <a href="#faqs" className="text-gray-700 hover:text-blue-600 transition-colors">常见问题</a>
+            <a href={createPath("#equipment")} className="text-gray-700 hover:text-blue-600 transition-colors">装备推荐</a>
+            <a href={createPath("#techniques")} className="text-gray-700 hover:text-blue-600 transition-colors">技巧教学</a>
+            <a href={createPath("#resorts")} className="text-gray-700 hover:text-blue-600 transition-colors">雪场推荐</a>
+            <a href={createPath("#safety")} className="text-gray-700 hover:text-blue-600 transition-colors">安全须知</a>
+            <a href={createPath("#faqs")} className="text-gray-700 hover:text-blue-600 transition-colors">常见问题</a>
           </nav>
 
           {/* Mobile menu button */}
@@ -51,11 +53,11 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
             <nav className="flex flex-col space-y-2 py-4">
-              <a href="#equipment" className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">装备推荐</a>
-              <a href="#techniques" className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">技巧教学</a>
-              <a href="#resorts" className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">雪场推荐</a>
-              <a href="#safety" className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">安全须知</a>
-              <a href="#faqs" className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">常见问题</a>
+              <a href={createPath("#equipment")} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">装备推荐</a>
+              <a href={createPath("#techniques")} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">技巧教学</a>
+              <a href={createPath("#resorts")} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">雪场推荐</a>
+              <a href={createPath("#safety")} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">安全须知</a>
+              <a href={createPath("#faqs")} className="text-gray-700 hover:text-blue-600 transition-colors px-4 py-2">常见问题</a>
             </nav>
           </div>
         )}

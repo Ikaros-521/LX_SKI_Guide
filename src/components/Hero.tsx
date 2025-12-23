@@ -1,3 +1,5 @@
+import { createPath } from '@/utils/path'
+
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white overflow-hidden">
@@ -32,13 +34,13 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
             <a
-              href="#equipment"
+              href={createPath("#equipment")}
               className="px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg hover-lift"
             >
               开始学习
             </a>
             <a
-              href="#resorts"
+              href={createPath("#resorts")}
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-700 transition-all hover-lift"
             >
               找雪场
